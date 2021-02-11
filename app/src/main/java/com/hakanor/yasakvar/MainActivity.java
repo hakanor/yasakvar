@@ -61,14 +61,29 @@ public class MainActivity extends AppCompatActivity {
                     Calendar c = Calendar.getInstance();
                     float yas_float = Float.valueOf(yas.getText().toString());
                     int saat= c.get(Calendar.HOUR_OF_DAY);
-                    System.out.println(saat);
+                    int gün = c.get(Calendar.DAY_OF_WEEK);
+                    System.out.println("Hell"+ saat);
+                    System.out.println("Hell" + gün);
 
+                    if((gün==1 || gün==7) ){
+                        buton2.setText("Dışarı Çıkamazsınız(Hafta Sonu Sebeiyle)");
+                        buton2.setAlpha(1.0f);
+                        buton2.setBackgroundColor(Color.parseColor("#FF0040"));
+                    }
+                    if((saat<5 || saat>20) ){
+                        buton2.setText("Dışarı Çıkamazsınız");
+                        buton2.setAlpha(1.0f);
+                        buton2.setBackgroundColor(Color.parseColor("#FF0040"));
+                    }
                     if((saat<5 || saat>20) && (yas_float<20 || yas_float>65)){
                         buton2.setText("Dışarı Çıkamazsınız");
-
+                        buton2.setAlpha(1.0f);
+                        buton2.setBackgroundColor(Color.parseColor("#FF0040"));
                     }
                     else{
                         buton2.setText("Dışarı Çıkabilirsiniz");
+                        buton2.setAlpha(1.0f);
+                        buton2.setBackgroundColor(Color.parseColor("#BBDE42"));
                     }
 
                 //Intent intent = new Intent(MainActivity.this, MainActivity2.class);
