@@ -3,6 +3,7 @@ package com.hakanor.yasakvar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,11 +15,9 @@ import java.util.Calendar;
 
 
 public class MainActivity extends AppCompatActivity {
-    public boolean cikis=false;
     private EditText yas;
     private Button buton1;
     private Button buton2;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         yas = findViewById(R.id.yas);
         buton1 = findViewById(R.id.buton1);
-
+        buton2 = findViewById(R.id.buton2);
 
         yas.addTextChangedListener(new TextWatcher() {
             @Override
@@ -62,28 +61,20 @@ public class MainActivity extends AppCompatActivity {
                     Calendar c = Calendar.getInstance();
                     float yas_float = Float.valueOf(yas.getText().toString());
                     int saat= c.get(Calendar.HOUR_OF_DAY);
-                    if(saat<5 || saat>20){
-                        cikis=false;
+                    System.out.println(saat);
+
+                    if((saat<5 || saat>20) && (yas_float<20 || yas_float>65)){
+                        buton2.setText("Dışarı Çıkamazsınız");
+
                     }
                     else{
-                        if(yas_float<20 || yas_float>65){
-                            cikis=false;
-                            buton2.setText("Dışarı Cıkamazsınız");
-                        }
-
-                        else{
-                            cikis=true;
-                            buton2.setText("Dışarı Cıkabilirsiniz");
-                        }
-
+                        buton2.setText("Dışarı Çıkabilirsiniz");
                     }
 
                 //Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                // startActivity(intent);
             }
         });
-
-
 
     }
 }

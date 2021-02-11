@@ -42,6 +42,7 @@
             android:layout_marginEnd="100dp"
             android:alpha="0.5"
             android:enabled="false"
+            android:background="#552FAF"
             android:text="Dışarı Çıkabilir Miyim"
             android:textColor="@android:color/white" />
 
@@ -53,7 +54,7 @@
             android:layout_marginTop="50dp"
             android:layout_marginEnd="100dp"
             android:alpha="1"
-            android:background="@android:color/holo_blue_bright"
+            android:background="#552FAF"
             android:enabled="false"
             android:text="-----"
             android:textColor="@android:color/holo_red_light" />
