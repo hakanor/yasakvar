@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="75dp"
-            android:text="BOŞ"
+            android:text="BOŞ2"
             android:textSize="24sp"
             android:textAlignment="center"
             android:gravity="center_horizontal" />
