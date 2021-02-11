@@ -70,12 +70,12 @@ public class MainActivity extends AppCompatActivity {
                         buton2.setAlpha(1.0f);
                         buton2.setBackgroundColor(Color.parseColor("#FF0040"));
                     }
-                    if((saat<5 || saat>20) ){
+                    if((saat<5 || saat>=20) ){
                         buton2.setText("Dışarı Çıkamazsınız");
                         buton2.setAlpha(1.0f);
                         buton2.setBackgroundColor(Color.parseColor("#FF0040"));
                     }
-                    if((saat<5 || saat>20) && (yas_float<20 || yas_float>65)){
+                    else if((saat<5 || saat>=20) && (yas_float<20 || yas_float>65)){
                         buton2.setText("Dışarı Çıkamazsınız");
                         buton2.setAlpha(1.0f);
                         buton2.setBackgroundColor(Color.parseColor("#FF0040"));
